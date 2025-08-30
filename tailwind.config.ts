@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'serif': ['Playfair Display', 'serif'],
+				'sans': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,16 +56,26 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// Photography-specific colors
+				sand: 'hsl(var(--sand))',
+				sepia: 'hsl(var(--sepia))',
+				mustard: 'hsl(var(--mustard))',
+				olive: 'hsl(var(--olive))',
+				forest: 'hsl(var(--forest))',
+				charcoal: 'hsl(var(--charcoal))',
+				'off-white': 'hsl(var(--off-white))',
+			},
+			backgroundImage: {
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-warm': 'var(--gradient-warm)',
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'photo': 'var(--shadow-photo)',
+				'hover': 'var(--shadow-hover)',
+			},
+			transitionProperty: {
+				'photo': 'var(--transition-photo)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
