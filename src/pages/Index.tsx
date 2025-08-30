@@ -115,62 +115,30 @@ const Index = () => {
               <div className={`text-white transform transition-all duration-1000 ${
                 isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
               }`}>
-                <div className="mb-6">
-                  <span className="inline-block px-4 py-2 bg-mustard/20 border border-mustard/30 rounded-full text-mustard text-sm font-medium mb-6">
-                    Fine Art Photography
-                  </span>
-                </div>
-                
-                <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-medium mb-6 leading-tight">
-                  Stories in
-                  <br />
+                <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-light mb-12 leading-none">
+                  <span className="block text-white/60">Elena</span>
                   <span className="relative">
-                    <em className="text-mustard">warm light</em>
-                    <svg
-                      className="absolute -bottom-2 left-0 w-full h-3"
-                      viewBox="0 0 300 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M2 6C100 2 200 10 298 6"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        className="text-mustard"
-                      />
-                    </svg>
+                    <em className="text-mustard">Volkov</em>
                   </span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-lg">
-                  Where architecture meets humanity, where nature whispers its secrets. 
-                  Each frame captures the poetry found in everyday moments.
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    size="lg" 
-                    className="bg-sepia hover:bg-sepia/90 text-white border-0"
-                    asChild
-                  >
-                    <a href="#gallery" className="inline-flex items-center">
-                      Explore Gallery
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </a>
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
-                    className="border-white/50 text-white hover:bg-white hover:text-charcoal"
-                    asChild
-                  >
-                    <a href="/about" className="inline-flex items-center">
-                      About Elena
-                      <Camera className="ml-2 h-4 w-4" />
-                    </a>
-                  </Button>
+                <div className="flex items-center gap-8 mb-16">
+                  <div className="w-16 h-px bg-mustard/60"></div>
+                  <p className="font-light text-white/80 tracking-wider uppercase text-sm">
+                    Photography
+                  </p>
                 </div>
+
+                <Button 
+                  variant="ghost" 
+                  size="lg" 
+                  className="text-white/80 hover:text-white border border-white/30 hover:border-white/60 bg-transparent backdrop-blur-sm"
+                  asChild
+                >
+                  <a href="#gallery" className="inline-flex items-center tracking-wider">
+                    Enter
+                  </a>
+                </Button>
               </div>
 
               {/* Right Side - Featured Photo with Stats */}
@@ -229,165 +197,11 @@ const Index = () => {
       </section>
 
       {/* Creative Gallery Section */}
-      <section id="gallery" className="py-16 md:py-24">
+      <section id="gallery" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header with Creative Layout */}
-          <div className="grid md:grid-cols-2 gap-12 items-end mb-16">
-            <div>
-              <h2 className="font-serif text-4xl md:text-5xl font-medium text-foreground mb-4">
-                Featured
-                <br />
-                <span className="text-sepia">Collections</span>
-              </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                Each photograph tells a story of light, shadow, and emotion. 
-                Discover how ordinary moments become extraordinary through 
-                the lens of intentional observation.
-              </p>
-            </div>
-            
-            <div className="flex items-center gap-8 justify-end">
-              <div className="text-right">
-                <div className="text-3xl font-serif font-medium text-sepia">150+</div>
-                <div className="text-sm text-muted-foreground">Captured Moments</div>
-              </div>
-              <div className="text-right">
-                <div className="text-3xl font-serif font-medium text-sepia">3</div>
-                <div className="text-sm text-muted-foreground">Collections</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Creative Category Navigation */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
-            {[
-              { id: 'all', label: 'All Work', icon: Heart, href: '/' },
-              { id: 'buildings', label: 'Architecture', icon: Camera, href: '/gallery/buildings' },
-              { id: 'people', label: 'Portraits', icon: Heart, href: '/gallery/people' },
-              { id: 'nature', label: 'Landscapes', icon: Camera, href: '/gallery/nature' },
-            ].map((category) => (
-              <Button
-                key={category.id}
-                variant="outline"
-                size="lg"
-                className="group border-olive/30 text-olive hover:bg-sepia hover:text-white hover:border-sepia transition-all duration-300"
-                asChild
-              >
-                <a href={category.href} className="inline-flex items-center">
-                  <category.icon className="h-4 w-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-                  {category.label}
-                </a>
-              </Button>
-            ))}
-          </div>
-          
-          {/* Enhanced Gallery Grid */}
+          {/* Minimal Gallery Grid */}
           <div className="relative">
             <MasonryGrid photos={featuredPhotos} />
-            
-            {/* Floating CTA */}
-            <div className="text-center mt-16">
-              <Button 
-                variant="default" 
-                size="lg"
-                className="bg-sepia hover:bg-sepia/90 text-white shadow-hover group"
-                asChild
-              >
-                <a href="/gallery/all" className="inline-flex items-center">
-                  View Complete Portfolio
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Recognition Section */}
-      <section className="py-16 bg-sand/20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <Award className="h-8 w-8 text-mustard mx-auto mb-4" />
-            <h3 className="font-serif text-2xl md:text-3xl font-medium text-foreground mb-4">
-              Recognition & Awards
-            </h3>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                year: '2024',
-                title: 'Romanian Photography Today',
-                type: 'Featured Artist',
-                color: 'text-sepia'
-              },
-              {
-                year: '2023',
-                title: 'Black Sea Light Festival',
-                type: 'First Place',
-                color: 'text-mustard'
-              },
-              {
-                year: '2023',
-                title: 'Architectural Digest Romania',
-                type: 'Published Work',
-                color: 'text-olive'
-              }
-            ].map((award, index) => (
-              <div key={index} className="text-center p-6 bg-white/50 rounded-sm">
-                <div className={`text-2xl font-serif font-medium mb-2 ${award.color}`}>
-                  {award.year}
-                </div>
-                <h4 className="font-medium text-foreground mb-1">{award.title}</h4>
-                <p className="text-sm text-muted-foreground">{award.type}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Creative Newsletter Section */}
-      <section className="py-20 bg-gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div 
-            className="w-full h-full"
-            style={{
-              backgroundImage: `url(${natureSample})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          />
-        </div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/95 backdrop-blur-sm p-8 md:p-12 rounded-sm shadow-photo">
-            <h3 className="font-serif text-3xl md:text-4xl font-medium text-foreground mb-4">
-              Join the Journey
-            </h3>
-            <p className="text-muted-foreground mb-8 text-lg">
-              Be the first to see new work, behind-the-scenes stories, 
-              and exclusive exhibition invitations.
-            </p>
-            
-            <div className="max-w-md mx-auto">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="flex-1 px-6 py-4 bg-background border border-border rounded-sm focus:outline-none focus:ring-2 focus:ring-sepia text-foreground placeholder:text-muted-foreground"
-                />
-                <Button 
-                  variant="default" 
-                  size="lg"
-                  className="bg-sepia hover:bg-sepia/90 text-white px-8"
-                >
-                  Subscribe
-                </Button>
-              </div>
-              <p className="text-xs text-muted-foreground mt-4">
-                No spam, just beautiful photography and stories. Unsubscribe anytime.
-              </p>
-            </div>
           </div>
         </div>
       </section>
