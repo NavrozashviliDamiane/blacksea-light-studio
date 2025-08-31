@@ -10,6 +10,8 @@ export interface Photo {
   imageUrl: string;
   uploadedBy: string;
   createdAt: any;
+  position?: number;
+  deleted?: boolean;
 }
 
 export const usePhotos = (category?: string) => {
@@ -38,10 +40,13 @@ export const usePhotos = (category?: string) => {
         
         querySnapshot.forEach((doc) => {
           const data = doc.data() as Omit<Photo, 'id'>;
-          photosData.push({
-            id: doc.id,
-            ...data
-          });
+          // Filter out deleted photos on the client side
+          if (!data.deleted) {
+            photosData.push({
+              id: doc.id,
+              ...data
+            });
+          }
         });
 
         setPhotos(photosData);
@@ -81,13 +86,16 @@ export const usePhotosByCategory = () => {
 
         querySnapshot.forEach((doc) => {
           const data = doc.data() as Omit<Photo, 'id'>;
-          const photo: Photo = {
-            id: doc.id,
-            ...data
-          };
-          
-          if (categorizedPhotos[photo.category]) {
-            categorizedPhotos[photo.category].push(photo);
+          // Filter out deleted photos on the client side
+          if (!data.deleted) {
+            const photo: Photo = {
+              id: doc.id,
+              ...data
+            };
+            
+            if (categorizedPhotos[photo.category]) {
+              categorizedPhotos[photo.category].push(photo);
+            }
           }
         });
 
