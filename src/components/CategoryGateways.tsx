@@ -1,16 +1,17 @@
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { useHomeImages } from '@/hooks/useHomeImages';
 import buildingSample from '@/assets/building-sample.jpg';
 import personSample from '@/assets/person-sample.jpg';
 import natureSample from '@/assets/nature-sample.jpg';
 
-const categories = [
+const defaultCategories = [
   {
-    id: 'buildings',
+    id: 'building',
     title: 'Buildings',
     subtitle: 'Walls that listen',
     image: buildingSample,
-    href: '/gallery/buildings',
+    href: '/gallery/building',
   },
   {
     id: 'people',
@@ -30,6 +31,17 @@ const categories = [
 
 const CategoryGateways = () => {
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
+  const { homeImages, loading } = useHomeImages();
+
+  // Use home page images if available, fallback to default
+  const getCategories = () => {
+    return defaultCategories.map(category => ({
+      ...category,
+      image: homeImages[category.id] || category.image
+    }));
+  };
+
+  const categories = getCategories();
 
   return (
     <section className="relative">

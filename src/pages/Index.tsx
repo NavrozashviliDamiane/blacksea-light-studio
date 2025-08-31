@@ -16,19 +16,19 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-8 md:mb-0">
-              <h3 className="font-serif text-2xl text-white font-light mb-2">Elena Volkov</h3>
-              <p className="text-white/60 italic">Stories in warm light</p>
+              <h3 className="font-serif text-2xl text-white font-light mb-2">Elene Gvasalia</h3>
+              <p className="text-white/60 italic">Capturing souls through Georgian light</p>
             </div>
             
             <div className="flex items-center space-x-8">
               <a 
-                href="mailto:elena@volkov-photo.com" 
+                href="mailto:elene@gvasalia-photo.com" 
                 className="text-white/80 hover:text-mustard transition-colors duration-300 text-sm tracking-wider uppercase"
               >
                 Email
               </a>
               <a 
-                href="https://instagram.com/elenavolkov" 
+                href="https://instagram.com/elenegvasalia" 
                 className="text-white/80 hover:text-mustard transition-colors duration-300 text-sm tracking-wider uppercase"
               >
                 Instagram
@@ -37,7 +37,7 @@ const Index = () => {
           </div>
           
           <div className="mt-12 pt-8 border-t border-white/10 text-center">
-            <p className="text-white/40 text-xs">© 2024 Elena Volkov Photography. All rights reserved.</p>
+            <p className="text-white/40 text-xs">© 2024 Elene Gvasalia Photography. All rights reserved.</p>
           </div>
         </div>
       </footer>

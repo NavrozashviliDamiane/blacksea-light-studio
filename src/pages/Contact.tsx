@@ -41,11 +41,11 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="font-serif text-4xl md:text-5xl font-medium text-foreground mb-4">
-              Let's Work Together
+              Let's Create Together
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              I'd love to hear about your project. Whether it's a portrait session, 
-              architectural documentation, or licensing existing work.
+              Ready to capture your story through the unique lens of Georgian artistry? 
+              Whether it's intimate portraits, architectural heritage, or commercial projects.
             </p>
           </div>
 
@@ -140,10 +140,10 @@ const Contact = () => {
                     <div>
                       <p className="font-medium text-foreground">Email</p>
                       <a 
-                        href="mailto:hello@elenavolkov.com" 
+                        href="mailto:elene@gvasalia-photo.com" 
                         className="text-muted-foreground hover:text-sepia transition-colors"
                       >
-                        hello@elenavolkov.com
+                        elene@gvasalia-photo.com
                       </a>
                     </div>
                   </div>
@@ -153,10 +153,10 @@ const Contact = () => {
                     <div>
                       <p className="font-medium text-foreground">Phone</p>
                       <a 
-                        href="tel:+40712345678" 
+                        href="tel:+995555123456" 
                         className="text-muted-foreground hover:text-sepia transition-colors"
                       >
-                        +40 712 345 678
+                        +995 555 123 456
                       </a>
                     </div>
                   </div>
@@ -166,7 +166,7 @@ const Contact = () => {
                     <div>
                       <p className="font-medium text-foreground">Location</p>
                       <p className="text-muted-foreground">
-                        Bucharest, Romania
+                        Tbilisi, Georgia
                       </p>
                     </div>
                   </div>
@@ -176,12 +176,12 @@ const Contact = () => {
                     <div>
                       <p className="font-medium text-foreground">Instagram</p>
                       <a 
-                        href="https://instagram.com/elenavolkov" 
+                        href="https://instagram.com/elenegvasalia" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-sepia transition-colors"
                       >
-                        @elenavolkov
+                        @elenegvasalia
                       </a>
                     </div>
                   </div>
@@ -194,7 +194,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Interested in licensing my photographs? I offer different usage rights for personal, editorial, and commercial projects.
+                    Interested in licensing my Georgian photography? I offer different usage rights for personal, editorial, and commercial projects showcasing authentic Caucasian culture.
                   </p>
                   <Button variant="outline" className="w-full border-olive text-olive hover:bg-sand">
                     View Licensing Options

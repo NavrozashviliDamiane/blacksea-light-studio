@@ -9,7 +9,7 @@ const Navigation = () => {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/gallery/buildings', label: 'Buildings' },
+    { href: '/gallery/building', label: 'Buildings' },
     { href: '/gallery/people', label: 'People' },
     { href: '/gallery/nature', label: 'Nature' },
     { href: '/about', label: 'About' },
@@ -31,7 +31,7 @@ const Navigation = () => {
             to="/" 
             className="font-serif text-xl font-medium text-foreground hover:text-sepia transition-colors"
           >
-            Elena Volkov
+            Elene Gvasalia
           </Link>
 
           {/* Desktop Navigation */}

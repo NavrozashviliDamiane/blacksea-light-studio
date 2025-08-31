@@ -1,18 +1,22 @@
 import { useEffect, useState } from 'react';
+import { useHomeImages } from '@/hooks/useHomeImages';
 import buildingSample from '@/assets/building-sample.jpg';
 import personSample from '@/assets/person-sample.jpg';
 import natureSample from '@/assets/nature-sample.jpg';
 
-const heroSlides = [
+const defaultSlides = [
   {
+    category: 'building',
     image: buildingSample,
     text: "Where stone holds memory",
   },
   {
+    category: 'people',
     image: personSample,
     text: "Where faces whisper light",
   },
   {
+    category: 'nature',
     image: natureSample,
     text: "Where nature breathes in gold",
   },
@@ -21,6 +25,13 @@ const heroSlides = [
 const CinematicHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTextVisible, setIsTextVisible] = useState(true);
+  const { homeImages } = useHomeImages();
+
+  // Use Firebase home images if available, fallback to defaults
+  const heroSlides = defaultSlides.map(slide => ({
+    ...slide,
+    image: homeImages[slide.category] || slide.image
+  }));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,7 +43,7 @@ const CinematicHero = () => {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [heroSlides.length]);
 
   return (
     <section className="relative h-screen overflow-hidden">
