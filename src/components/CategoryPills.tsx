@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 
 const categories = [
   { id: 'all', label: 'All', href: '/' },
-  { id: 'building', label: 'Buildings', href: '/gallery/building' },
+  { id: 'building', label: 'Architecture', href: '/gallery/building' },
   { id: 'people', label: 'People', href: '/gallery/people' },
   { id: 'nature', label: 'Nature', href: '/gallery/nature' },
 ];

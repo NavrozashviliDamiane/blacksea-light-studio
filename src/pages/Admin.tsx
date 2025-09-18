@@ -128,7 +128,7 @@ const Admin = () => {
       const newPhoto: Photo = {
         id: docRef.id,
         name,
-        category: category || activeCategory,
+        category: (category || activeCategory) as 'building' | 'people' | 'nature',
         imageUrl,
         uploadedBy: user.uid,
         position,

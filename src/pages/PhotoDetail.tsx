@@ -10,7 +10,7 @@ interface Photo {
   id: string;
   name: string;
   imageUrl: string;
-  category: string;
+  category: 'building' | 'people' | 'nature';
 }
 
 const PhotoDetail = () => {
@@ -25,7 +25,18 @@ const PhotoDetail = () => {
       const docSnap = await getDoc(docRef);
       
       if (docSnap.exists()) {
-        setPhoto({ id: docSnap.id, ...docSnap.data() } as Photo);
+        const data = docSnap.data();
+        // Ensure category is one of the allowed values
+        const category = ['building', 'people', 'nature'].includes(data.category) 
+          ? data.category as 'building' | 'people' | 'nature'
+          : 'nature'; // Default to nature if category is invalid
+        
+        setPhoto({ 
+          id: docSnap.id, 
+          name: data.name, 
+          imageUrl: data.imageUrl,
+          category
+        });
       }
     };
 

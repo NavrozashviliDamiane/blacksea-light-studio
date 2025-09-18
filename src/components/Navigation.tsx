@@ -9,10 +9,9 @@ const Navigation = () => {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/gallery/building', label: 'Buildings' },
+    { href: '/gallery/building', label: 'Architecture' },
     { href: '/gallery/people', label: 'People' },
     { href: '/gallery/nature', label: 'Nature' },
-    { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
   ];
 
@@ -56,7 +55,7 @@ const Navigation = () => {
             {/* Social Links */}
             <div className="flex items-center space-x-2 ml-6 pl-6 border-l border-border">
               <Button variant="ghost" size="icon" asChild>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/leenkk_" target="_blank" rel="noopener noreferrer">
                   <Instagram className="h-4 w-4" />
                 </a>
               </Button>
@@ -100,7 +99,7 @@ const Navigation = () => {
               
               <div className="flex items-center space-x-2 px-3 py-2">
                 <Button variant="ghost" size="icon" asChild>
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/leenkk_" target="_blank" rel="noopener noreferrer">
                     <Instagram className="h-4 w-4" />
                   </a>
                 </Button>

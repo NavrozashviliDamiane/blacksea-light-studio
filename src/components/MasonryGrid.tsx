@@ -4,7 +4,7 @@ import PhotoCard from './PhotoCard';
 interface Photo {
   id: string;
   title: string;
-  category: 'buildings' | 'people' | 'nature';
+  category: 'building' | 'people' | 'nature';
   imageUrl: string;
   location?: string;
   width: number;

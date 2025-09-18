@@ -23,15 +23,17 @@ const Gallery = () => {
   const { photos, loading, error } = usePhotos(category);
 
   // Transform Firebase photos to match MasonryGrid expected format
-  const transformedPhotos = photos.map(photo => ({
-    id: photo.id,
-    title: photo.name,
-    category: photo.category,
-    imageUrl: photo.imageUrl,
-    location: 'Romania', // Default location
-    width: 800,
-    height: 1200,
-  }));
+  const transformedPhotos = photos.map(photo => {
+    return {
+      id: photo.id,
+      title: photo.name,
+      category: photo.category,
+      imageUrl: photo.imageUrl,
+      location: 'Romania', // Default location
+      width: 800,
+      height: 1200,
+    };
+  });
 
   const title = category ? categoryTitles[category] : 'All Work';
   const description = category ? categoryDescriptions[category] : 'A comprehensive collection of my photographic work across all categories.';

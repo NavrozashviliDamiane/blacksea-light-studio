@@ -6,7 +6,7 @@ import { db, auth } from '@/lib/firebase';
 export interface Photo {
   id: string;
   name: string;
-  category: string;
+  category: 'building' | 'people' | 'nature'; // Using union type for better type safety
   imageUrl: string;
   uploadedBy: string;
   createdAt: any;

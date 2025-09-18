@@ -140,26 +140,15 @@ const Contact = () => {
                     <div>
                       <p className="font-medium text-foreground">Email</p>
                       <a 
-                        href="mailto:elene@gvasalia-photo.com" 
+                        href="mailto:elene@gvasalia.ge" 
                         className="text-muted-foreground hover:text-sepia transition-colors"
                       >
-                        elene@gvasalia-photo.com
+                        elene@gvasalia.ge
                       </a>
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-3">
-                    <Phone className="h-5 w-5 text-sepia mt-0.5" />
-                    <div>
-                      <p className="font-medium text-foreground">Phone</p>
-                      <a 
-                        href="tel:+995555123456" 
-                        className="text-muted-foreground hover:text-sepia transition-colors"
-                      >
-                        +995 555 123 456
-                      </a>
-                    </div>
-                  </div>
+
                   
                   <div className="flex items-start space-x-3">
                     <MapPin className="h-5 w-5 text-sepia mt-0.5" />
@@ -176,12 +165,12 @@ const Contact = () => {
                     <div>
                       <p className="font-medium text-foreground">Instagram</p>
                       <a 
-                        href="https://instagram.com/elenegvasalia" 
+                        href="https://www.instagram.com/leenkk_" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-sepia transition-colors"
                       >
-                        @elenegvasalia
+                        @leenkk_
                       </a>
                     </div>
                   </div>
@@ -196,9 +185,7 @@ const Contact = () => {
                   <p className="text-sm text-muted-foreground mb-4">
                     Interested in licensing my Georgian photography? I offer different usage rights for personal, editorial, and commercial projects showcasing authentic Caucasian culture.
                   </p>
-                  <Button variant="outline" className="w-full border-olive text-olive hover:bg-sand">
-                    View Licensing Options
-                  </Button>
+
                 </CardContent>
               </Card>
             </div>

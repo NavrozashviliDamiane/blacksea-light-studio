@@ -8,7 +8,7 @@ import natureSample from '@/assets/nature-sample.jpg';
 const defaultCategories = [
   {
     id: 'building',
-    title: 'Buildings',
+    title: 'Architecture',
     subtitle: 'Walls that listen',
     image: buildingSample,
     href: '/gallery/building',

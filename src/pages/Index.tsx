@@ -9,8 +9,7 @@ const Index = () => {
       <Navigation />
       <CinematicHero />
       <CategoryGateways />
-      <FeaturedStory />
-      
+
       {/* Minimal Footer */}
       <footer className="py-16 bg-charcoal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,23 +21,20 @@ const Index = () => {
             
             <div className="flex items-center space-x-8">
               <a 
-                href="mailto:elene@gvasalia-photo.com" 
+                href="mailto:elene@gvasalia.ge" 
                 className="text-white/80 hover:text-mustard transition-colors duration-300 text-sm tracking-wider uppercase"
               >
                 Email
               </a>
               <a 
-                href="https://instagram.com/elenegvasalia" 
+                href="https://www.instagram.com/leenkk_" 
                 className="text-white/80 hover:text-mustard transition-colors duration-300 text-sm tracking-wider uppercase"
               >
                 Instagram
               </a>
             </div>
           </div>
-          
-          <div className="mt-12 pt-8 border-t border-white/10 text-center">
-            <p className="text-white/40 text-xs">© 2024 Elene Gvasalia Photography. All rights reserved.</p>
-          </div>
+
         </div>
       </footer>
     </div>
